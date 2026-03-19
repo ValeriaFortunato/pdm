@@ -1,6 +1,14 @@
 package com.example.myapp;
 
-import ...
+
+
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         b = findViewById(R.id.button);
         TextView tv = findViewById(R.id.tv);
 
-        b.setOnClickListener( View v -> {
+        b.setOnClickListener(  v -> {
             contador++;
             Random random = new Random();
             int r = random.nextInt(100);
