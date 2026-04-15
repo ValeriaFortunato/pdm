@@ -1,4 +1,4 @@
-package com.example.myapp;
+package com.example.app;
 
 import android.os.Bundle;
 
@@ -15,8 +15,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        getString(R.string.app_name);
-
 
     }
 }
