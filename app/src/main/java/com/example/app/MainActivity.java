@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         bntAvancar=findViewById(R.id.buttonAvancar);
         bntVoltar=findViewById(R.id.buttonVoltar);
-        imageView=findViewById(R.id.imageViewimageView);
+        imageView=findViewById(R.id.imageView);
 
         bntAvancar.setOnClickListener(v -> {
             imageView.setImageResource(imagens[posicao]);
