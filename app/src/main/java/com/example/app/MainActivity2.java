@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import com.example.myapp.R;
 
 public class MainActivity2 extends AppCompatActivity {
     Button bntFechar;
@@ -27,7 +28,7 @@ public class MainActivity2 extends AppCompatActivity {
         });
         String txt=getIntent().getExtras().getString("msg");
         tv.setText(txt);
-        bntFechar=findViewById(R.id.button);
+        bntFechar=findViewById(R.id.bntFechar);
         bntFechar.setOnClickListener(v -> {
             finish();
         });
