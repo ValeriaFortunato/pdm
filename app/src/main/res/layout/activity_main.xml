@@ -8,10 +8,10 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/tv"
+        android:id="@+id/TextView"
         android:layout_width="49dp"
         android:layout_height="33dp"
-        android:text="@string/hello"
+        android:text="HELLOOOO"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
