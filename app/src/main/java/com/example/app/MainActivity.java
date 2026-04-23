@@ -6,37 +6,40 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.lang.reflect.Array;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
+    Button bntAvancar, bntVoltar;
 
-    Button bntVoltar, bntAvancar;
     ImageView imageView;
-    Integer imagens[] = new Integer[]{
-            R.drawable.cachorro,
-            R.drawable.gardem,
-            R.drawable.happy,
-            R.drawable.patinho,
-            R.drawable.porquinho
-    };
 
-    int posicao = 0;
+    Integer imagens[] = new Integer[]{R.drawable.cachorro,R.drawable.gardem,R.drawable.happy,R.drawable.patinho,R.drawable.porquinho};
+
+    int posicao=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        bntVoltar = findViewById(R.id.buttonVoltar);
-        bntAvancar = findViewById(R.id.buttonAvancar);
-        imageView = findViewById(R.id.imageView);
+
+
+        bntAvancar=findViewById(R.id.buttonAvancar);
+        bntVoltar=findViewById(R.id.buttonVoltar);
+        imageView=findViewById(R.id.imageViewimageView);
 
         bntAvancar.setOnClickListener(v -> {
             imageView.setImageResource(imagens[posicao]);
+            if(posicao > imagens.length-1) {
+                posicao =0;
+            }else{
+                posicao++;
+            }
         });
 
     }
-}}
+}
