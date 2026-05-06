@@ -12,32 +12,23 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
-
-
-    String nomes[] = new String[]{"Daniel","Sofia","Prancha","Davi","Iran","Fernandinho","Borracha"};
-
+     ListView lv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        getString(R.string.app_name);
+        lv = findViewById(R.id.listview);
+        //RECUPERANDO DADOS DATASUERCE
 
-        ListView listView = findViewById(R.id.listView);
+        PlanetaController planetaController = new PlanetaController();
+        ArrayAdapter<> adaptador = new ArrayAdapter( this, );]
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(
-                this, //contexto
-                android.R.layout.simple_list_item_1, //Recurso de layout xml
-                android.R.id.text1, //id do textView interno do layout
-                nomes // Array de String DataSource
-        );
+        lv.setAdapter(adaptador);
 
-        listView.setAdapter(arrayAdapter);
-        listView.setOnItemClickListener((parent, view, position, id) -> {
-            Intent i = new Intent(getApplicationContext(), MainActivy2.class);
-            i.putExtra("nome", nomes[position]);//["nome", valor
-            startActivity(i);
-        });
+
     }
 }
