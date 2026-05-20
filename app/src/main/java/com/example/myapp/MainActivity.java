@@ -32,6 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
         //Recuperar Dados do SQlite
         Cursor c=sqLiteDatabase.rawQuery("SELECT id*10,titulo , nota  FROM notas" , null);
-
+        /// kjfjsfjkjdgjdg
     }
 }
