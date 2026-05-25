@@ -1,10 +1,12 @@
 package com.example.myapp;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,10 +14,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+
 public class MainActivity extends AppCompatActivity {
 
 
+
+
     String nomes[] = new String[]{"Daniel","Sofia","Prancha","Davi","Iran","Fernandinho","Borracha"};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getString(R.string.app_name);
 
+
         ListView listView = findViewById(R.id.listView);
+
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(
                 this, //contexto
@@ -33,10 +41,11 @@ public class MainActivity extends AppCompatActivity {
                 nomes // Array de String DataSource
         );
 
+
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener((parent, view, position, id) -> {
-            Intent i = new Intent(getApplicationContext(), MainActivy2.class);
-            i.putExtra("nome", nomes[position]);//["nome", valor
+            Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+            i.putExtra("nome",nomes[position]);//["nome", valor
             startActivity(i);
         });
     }
