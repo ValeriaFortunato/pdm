@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/TextView"
+        android:id="@+id/tv"
         android:layout_width="49dp"
         android:layout_height="33dp"
         android:text="HELLOOOO"
