@@ -1,35 +1,45 @@
-package com.example.app;
+package com.example.myapp;
+
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText et;
-    Button btn;
 
+    Button btn;
+    EditText et;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        et = findViewById(R.id.EditText);
+
         btn = findViewById(R.id.button);
+        et = findViewById(R.id.editText);
+
 
         btn.setOnClickListener(v -> {
-            String msg = et.getText().toString();
-
-            Intent intent = new Intent(MainActivity.this, MainActivity2.class);
-            intent.putExtra("msg", msg);
-
-            startActivity(intent);
+            Intent i = new Intent(getApplicationContext(), MainActivity2.class);
+            String msg=et.getText().toString();
+            i.putExtra("msg", msg);
+            startActivity(i);
         });
+
+
+
+
     }
 }
-

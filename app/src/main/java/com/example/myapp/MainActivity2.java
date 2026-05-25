@@ -1,9 +1,11 @@
-package com.example.app;
+package com.example.myapp;
+
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,10 +13,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity2 extends AppCompatActivity {
-    Button bntFechar;
-    TextView tv;
 
+public class MainActivity2 extends AppCompatActivity {
+    Button botaoFechar;
+    TextView tv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,11 +27,14 @@ public class MainActivity2 extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        String txt=getIntent().getExtras().getString("msg");
-        tv.setText(txt);
-        bntFechar=findViewById(R.id.bntFechar);
-        bntFechar.setOnClickListener(v -> {
+
+
+        botaoFechar=findViewById(R.id.btnfechar);
+        tv=findViewById(R.id.tv2);
+        Intent i = getIntent();
+        Bundle b=i.getExtras();
+        String msg = b.getString("msg");
+        tv.setText(msg);
+        botaoFechar.setOnClickListener(v -> {
             finish();
         });
-    }
-}
