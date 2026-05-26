@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
         imageview=findViewById(R.id.imageView);
         btnCalcular=findViewById(R.id.button);
-        peso=findViewById(R.id.tvPeso);
-        altura=findViewById(R.id.tvAltura);
+        peso=findViewById(R.id.etPeso);
+        altura=findViewById(R.id.etAltura);
         resul=findViewById(R.id.tvResul);
         classi=findViewById(R.id.tvClass);
 
